@@ -1,13 +1,29 @@
 const express = require('express');
 const routes = express.Router();
-
+const Person = require('./src/model/Profile');
 
 routes.get('/', (req, res) => {
-    res.send("Essa e a Primeira Rota Creada com Express");
+    res.render('index');
+})
+
+routes.get('/certificate-Layout', (req, res) => {
+    res.render('certificate-Layout');
 })
 
 routes.get('/certificate' ,  (req, res) => {
-    res.render('certificate' , {layout: false});
+
+    res.render('certificate' , { Pessoa:Person});
+    
+})
+
+routes.post('/certificate' ,  (req, res) => {
+    
+    const fistname = req.body["fistname"];
+    
+    console.log(fistname);
+    res.render('certificate');
+   
+    
 })
 
 

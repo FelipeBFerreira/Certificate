@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Dados do Certificado</h1>
-</body>
-</html>
+<div>
+      
+    {{#each Pessoa}}
+    <h1>{{req.body.value}}<span> </span>{{lastname.lastname}}</h1>
+    <h1>{{curso}}</h1>
+
+    {{/each}}
+    <form>
+        <input type="button" value="Print this page" onClick="window.print()" />
+    </form>
+</div>
